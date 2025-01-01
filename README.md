@@ -10,6 +10,7 @@ Docker runtime for the UNIX programming class.
   ```
   ./build.sh
   ```
+  You only need to do this once, unless the files placed in the `debian` folder is modified.
 
 - Create the runtime instance using the command:
   ```
@@ -22,6 +23,8 @@ Docker runtime for the UNIX programming class.
   ```
 
   ***Please note that the script must be run as a regular user.*** Ensure that your environment allows a regular user to run the `docker` command. By default, it works with Docker Desktop on macOS or a Windows terminal with WSL integration. For Linux users, you may need to add the current user to the `docker` group.
+
+  You only need to do this once. The container will automatically start when the docker service is started.
 
 - Stop the runtime
   ```
