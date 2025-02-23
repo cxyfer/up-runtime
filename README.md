@@ -6,7 +6,7 @@ Docker runtime for the UNIX programming class. ***Modified for Windows users***.
 
 - Clone this repo
 
-- Change the line endings of the ./debian/entrypoint.sh file to LF (Unix line endings).
+- Change the line endings of the `./debian/entrypoint.sh` file to `LF` (Unix line endings).
 
 - Build the required image `upclass/runtime` using the command:
   ```
