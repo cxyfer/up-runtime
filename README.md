@@ -1,22 +1,24 @@
 # up-runtime
 
-Docker runtime for the UNIX programming class.
+Docker runtime for the UNIX programming class. ***Modified for Windows users***.
 
 ## How to use it
 
 - Clone this repo
 
+- Change the endline of the `./debian/entrypoint.sh` file to `LF` (Unix line ending).
+
 - Build the required image `upclass/runtime` using the command:
   ```
-  ./build.sh
+  docker build -t upclass/runtime ./debian
   ```
   You only need to do this once, unless the files placed in the `debian` folder is modified.
 
 - Create the runtime instance using the command:
   ```
-  ./start.sh [password]
+  ./start.bat
   ```
-  The script will create a docker container named `up-runtime`. It detects the current user's login ID, user ID, and group ID, and then creates the same user within the docker container using a default password of `password`. To change the default password, provide the desired password as the first argument when running the script. Alternatively, you can log into the docker container using the following command:
+  The script will create a docker container named `up-runtime`. It will create the docker container using a default username and password of `upclass` and `password`. Alternatively, you can log into the docker container using the following command:
 
   ```
   ssh -p 22222 <your-username>@localhost
